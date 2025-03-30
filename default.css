@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* 部屋の背景 */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b0c4de; /* 薄い青色（部屋の背景） */
+}
+
+.room {
+    width: 80%;
+    height: 80%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ccc; /* 部屋の境界線 */
+}
+
+/* 人のキャラクター（単純な丸で表現） */
+.person {
+    width: 50px;
+    height: 50px;
+    background-color: #f08080; /* 人の色（ピンク色） */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    animation: rollAround 6s ease-in-out infinite;
+}
+
+/* 人がごろごろ動くアニメーション */
+@keyframes rollAround {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(150px, 0);
+    }
+    50% {
+        transform: translate(150px, 100px);
+    }
+    75% {
+        transform: translate(0, 100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
